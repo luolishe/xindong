@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+	<meta http-equiv="Cache-Control" content="no-transform" />
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<title>日落创造性的动画404错误页面</title>
+	<!-- include the site animate stylesheet -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/luolishe/xindong@main/riluo404/css/style.css" media="screen"/>     
+	<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Poppins:400,300' rel='stylesheet' type='text/css'>  
+
+	<script>
+function load()
+{
+	alert("连接中断，请联系客服！");
+}
+</script> 
+
+</head>
+
+<body onload="load()" >
+	<!-- Page Loader -->
+	<div id="pre-loader" class="loader-container">
+		<div class="loader">
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<!-- mt bluesky -->
+		<div id="mt-bluesky"></div>
+		<!-- Page Loader -->
+		<div id="mt-sun"></div>
+		<!-- mt sun -->
+		<div id="mt-sun2"></div>
+		<!-- mt cloud -->
+		<div id="mt-cloud"></div>
+		<!-- mt base -->
+		<div id="mt-base"></div>
+		<!-- base overlay -->
+		<div id="base-overlay"></div>
+		<!-- night -->
+		<div id="night"></div>
+		<!-- stars -->
+		<div id="stars"></div>
+		<!-- sstar -->
+		<div id="sstar"></div>
+		<!-- moon -->
+		<div id="moon"></div>
+		<!-- hock -->
+		<div id="hock"></div>
+		<!-- title -->
+		<span id="title"><span>404</span></span>
+		<!-- oh -->
+		<span id="oh">哎呀</span>
+		<!-- txt -->
+		<div class="txt">
+			<p>很抱歉，链接中断 请您联系客服.</p>
+			<a href="index.html" class="btn">返回首页</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/luolishe/xindong@main/riluo404/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/luolishe/xindong@main/riluo404/js/jquery.color.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#mt-sun').animate({'top':'96%','opacity':0.4}, 12000,function(){
+				$('#stars').animate({'opacity':1}, 5000,function(){
+					$('#moon').animate({'top':'10%','opacity':1}, 6000, function(){
+						$('#hock').animate({'bottom':'190px','opacity':1}, 3000, function(){
+							$('#hock').animate({'bottom':'49%'}, 2000);
+							$('#title').animate({'top':'44%','opacity':1}, 2000);
+							$('#sstar').animate({'opacity':0.8}, 300);
+							$('#sstar').animate({'backgroundPosition':'0px 0px','top':'15%', 'opacity':0
+							}, 300,function(){
+								$('#ground-overlay').animate({'opacity':1}, 1500);
+								$('#title').animate({'top':'53%','opacity':1}, 2000, function(){
+									$('#oh').animate({'opacity':1}, 1000);
+									$('.txt').animate({'opacity':1}, 1000);
+								});
+							});
+						});
+					});
+				});
+			});
+			$('#mt-sun').animate({'top':'96%','opacity':0.8}, 12000);
+			$('#mt-bluesky').animate({'backgroundColor':'#4F0030'}, 18000);
+			$('#mt-cloud').animate({'backgroundPosition':'1000px 0px','opacity':0}, 30000);
+			$('#night').animate({'opacity':0.8}, 20000);
+			$('html').animate({'backgroundColor':'#1c2401'}, 20000);
+		});
+	</script>
+</body>
+</html>
